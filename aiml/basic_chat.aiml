@@ -1,0 +1,68 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+
+    <category>
+        <pattern>HELLO</pattern>
+        <template> Hello Kim!  </template>
+    </category>
+     <category>
+        <pattern>HELLO *</pattern>
+        <template> Hello, sir!  </template>
+    </category>
+    <category>
+        <pattern> I AM * </pattern>
+        <template> Hi <set name="username"><star/>!</set> </template>
+    </category>
+    <category>
+        <pattern>Goodbye</pattern>
+        <template> Bye <get name="username" /> </template>
+    </category>
+    <category>
+        <pattern>안녕</pattern>
+        <template> 안녕! </template>
+    </category>
+    <category>
+        <pattern> 나는 * 입니다 </pattern>
+        <template> 안녕 <set name="username"><star/>!</set> </template>
+    </category>
+    <category>
+        <pattern> 나 는 * 입니다 </pattern>
+        <template> <srai>나는 <star /> 입니다</srai> </template>
+    </category>
+    <category>
+        <pattern> 난 * </pattern>
+        <template> <srai>나는 <star /> 입니다</srai> </template>
+    </category>
+    <category>
+        <pattern> 난 * 이야 </pattern>
+        <template> <srai>나는 <star /> 입니다</srai> </template>
+    </category>
+    <category>
+        <pattern> 난 * 이 야 </pattern>
+        <template> <srai>나는 <star /> 입니다</srai> </template>
+    </category>
+    <category>
+        <pattern> 넌 누구 니 </pattern>
+        <template> 저는 파이봇입니다 </template>
+    </category>
+    <category>
+        <pattern> 불 켜 </pattern>
+        <template> 불을 켰습니다<system>python led.py 1</system> </template>
+    </category>
+    <category>
+        <pattern> 불 꺼 </pattern>
+        <template> 불을 껐습니다<system>python led.py 0</system> </template>
+    </category>
+    <category>
+        <pattern> 오늘 몇 일 이 야 </pattern>
+        <template> day </template>
+    </category>
+    <category>
+        <pattern> 오늘 며칠 이 야 </pattern>
+        <template> day </template>
+    </category>
+    <category>
+        <pattern> 공부 해 </pattern>
+        <template> load_aiml </template>
+    </category>
+<aiml>

@@ -1,0 +1,44 @@
+
+Annyong
+Annyonghaseyo
+Kim
+Lee
+Are you listening
+Be quiet
+Bye
+Bye Pi
+Do you do email
+Play music
+Goodbye
+Hello
+Hello Pi
+Hi
+Hi Pi
+How long have you been running
+How long have you been up
+How much disk do you have
+How much free disk space
+How much free memory 
+How much memory do you have
+How old are you
+Is it going to rain
+Is the sun out
+Quiet
+Raspberry Pi
+Sudo reboot 
+Sudo Shutdown
+What day is it
+What day is it today
+What is the date
+What is the date today
+What is the time
+What is the weather in Busan
+What is your operating system
+What is your processor
+What languages do you know
+What operating system are you running
+Whats the weather look like
+What text to speech package do you use
+What time is it
+Which processor do you have
+Who made you

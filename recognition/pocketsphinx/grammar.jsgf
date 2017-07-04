@@ -1,0 +1,73 @@
+#JSGF V1.0;
+grammar commands;
+
+<person> =
+	KIM	|
+	LEE	;
+
+<city>	=
+	BUSAN ;
+
+<name> = 
+	<person>	|
+	[ RASPBERRY ] PI ]	;
+
+<action> =
+	DO EMAIL 	;
+
+<question> =
+	DO YOU <action>		|
+	WHAT IS THE WEATHER IN <city>	|
+	WHAT IS YOUR OPERATING SYSTEM	|
+	WHAT IS YOUR PROCESSOR 	|
+	WHAT LANGUAGES DO YOU KNOW 	|
+	WHAT OPERATING SYSTEM ARE YOU RUNNING	|
+	WHO MADE YOU		;
+ 
+
+<value_question> =
+	HOW MUCH [ FREE ] DISK [ SPACE ] DO YOU HAVE	|
+	HOW MUCH [ FREE ] MEMORY DO YOU HAVE		|
+	HOW OLD ARE YOU					;
+
+<cli_command> =
+	SUDO SHUTDOWN	|
+	SUDO REBOOT 	;
+
+<robot_name> =
+	PI	;
+
+<greeting> =
+	HELLO 	|
+	ANNYONG	;
+
+<farewell> =
+	GOODBYE	|
+	BYE	;
+
+<robot_greeting> =
+	<greeting> <robot_name> ;
+
+<robot_farewell> =
+	<farewell> <robot_name> ;
+
+<wx_question> =
+	IS IT GOING TO RAIN	|
+	IS THE SUN OUT		;
+
+<datetime_question> =
+	WHAT ( DAY | DATE ) IS IT [ TODAY ]	|
+	WHAT TIME IS IT [ NOW ]		;
+
+
+public <command> =
+	<datetime_question>	|
+	<wx_question>		|
+	<greeting>		|
+	<robot_greeting>	|
+	<farewell>		|
+	<robot_farewell>	|
+	<cli_command>		|
+	<value_question>	|
+	<question>		;;
+

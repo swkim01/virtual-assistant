@@ -1,0 +1,106 @@
+#JSGF V1.0;
+grammar commands;
+
+<person> =
+	KIM	|
+	LEE	;
+
+<city>	=
+	BUSAN ;
+
+<name> = 
+	<person>	|
+	[ RASPBERRY ] PI ]	;
+
+<state> = 
+	LISTENING 	|
+	UP		|
+	RUNNING		;
+
+<condition> =
+	HEAR ME		|
+	UNDERSTAND [ ( ME | THAT ) ] 	;
+
+<object> =
+	A BED TIME	|
+	A WEB SITE	;
+
+<action> =
+	DO EMAIL 	|
+	TAKE DICTATION	;
+
+<time_question>	 =
+	HOW LONG DO YOUR BATTERIES LAST 	|
+	HOW LONG HAVE YOU BEEN <state>		;
+
+	
+<question> =
+	ARE YOU <state>	|
+	DID YOU <condition>	|
+	DO YOU HAVE <object>	|
+	DO YOU <action>		|
+	WHAT DID YOU UNDERSTAND |
+	WHAT DO YOU KNOW	|
+	WHAT IS <person> DOING	|
+	WHAT IS THE WEATHER IN <city>	|
+	WHAT IS YOUR OPERATING SYSTEM	|
+	WHAT IS YOUR PROCESSOR 	|
+	WHAT LANGUAGES DO YOU KNOW 	|
+	WHAT OPERATING SYSTEM ARE YOU RUNNING	|
+	WHAT SPEECH RECOGNITION PACKAGE ARE YOU RUNNING	|
+	WHEN WAS YOUR LAST BACKUP |
+	WHERE IS <person>	|
+	WHO MADE YOU		;
+ 
+
+<value_question> =
+	HOW MUCH [ FREE ] DISK [ SPACE ] DO YOU HAVE	|
+	HOW MUCH [ FREE ] MEMORY DO YOU HAVE		|
+	HOW OLD ARE YOU					;
+
+<cli_command> =
+	SUDO SHUTDOWN	|
+	SUDO REBOOT 	;
+
+<robot_name> =
+	PI	;
+
+<greeting> =
+	HELLO 	|
+	ANNYONG	;
+
+<farewell> =
+	GOODBYE	|
+	BYE	;
+
+<robot_greeting> =
+	<greeting> <robot_name> ;
+
+<robot_farewell> =
+	<farewell> <robot_name> ;
+
+<wx_question> =
+	IS IT GOING TO RAIN	|
+	IS THE SUN OUT		;
+
+<ability_question> =
+	WHAT CAN YOU DO		;
+
+<datetime_question> =
+	WHAT ( DAY | DATE ) IS IT [ TODAY ]	|
+	WHAT TIME IS IT [ NOW ]		;
+
+
+public <command> =
+	<datetime_question>	|
+	<ability_question>	|
+	<wx_question>		|
+	<greeting>		|
+	<robot_greeting>	|
+	<farewell>		|
+	<robot_farewell>	|
+	<cli_command>		|
+	<value_question>	|
+	<question>		|
+	<time_question>		;;
+
